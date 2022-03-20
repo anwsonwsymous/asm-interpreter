@@ -63,3 +63,32 @@ The above code would
 - prepare the output of the program and then return it with the end instruction.
 
 In this case, the output would be `(5+1)/2 = 3`.
+
+> See in resources folder for `.asm` examples
+
+### Build
+
+```shell
+cargo build --release
+```
+
+### Usage
+
+```markdown
+Usage: asmintr.exe <file_name> [-d] [-i]
+
+Run assembly code
+
+Positional Arguments:
+    file_name         '.asm' file path
+
+Options:
+    -d, --debug       debug interpreter registers, stack, flags and output
+    -i, --inst        print parsed instructions
+    --help            display usage information
+```
+
+Run example from resources folder:
+```shell
+target/release/asmintr resources/fibonacci.asm
+```
