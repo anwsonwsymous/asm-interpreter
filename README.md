@@ -27,7 +27,7 @@ Interpreter of assembler which supports following instructions:
 
 ## Input format
 
-The `AssemblerInterpreter::interpret` method takes as input a multiline string of instructions,
+The `Interpreter::interpret` method takes as input a multiline string of instructions,
 delimited with EOL characters.
 
 Instructions may also have indentation for readability purposes.
@@ -36,7 +36,7 @@ For example:
 
 ```rust
 let program = "\n; My first program\nmov  a, 5\ninc  a\ncall function\nmsg  '(5+1)/2 = ', a    ; output message\nend\n\nfunction:\n    div  a, 2\n    ret\n";
-AssemblerInterpreter::interpret(program);
+Interpreter::interpret(program);
 ```
 
 Is equivalent to:
